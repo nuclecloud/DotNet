@@ -68,7 +68,7 @@ Get preset by name, return (PresetModel)
 ### Variable
 
 - `Update(userToken,presetId, value)`  
- Update variable, return (VariableModel)
+ Update variable, if it does not exists this will create a new variable with the value provided, return (VariableModel).  
 - `Get(userToken,presetId)`  
  Get variable, return (VariableModel) 
 - `Delete(userToken,presetId)`  
