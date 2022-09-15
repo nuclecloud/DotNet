@@ -1,0 +1,10 @@
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/bin/Release/netstandard2.0/NucleCloudLibrary.deps.json
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/bin/Release/netstandard2.0/NucleCloudLibrary.dll
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/bin/Release/netstandard2.0/NucleCloudLibrary.pdb
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.csproj.AssemblyReference.cache
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.AssemblyInfoInputs.cache
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.AssemblyInfo.cs
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.csproj.CoreCompileInputs.cache
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.dll
+/Users/badrdouah/Documents/GitHub/NucleCloud_DotNet_Library/NucleCloudLibrary/obj/Release/netstandard2.0/NucleCloudLibrary.pdb
