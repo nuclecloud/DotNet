@@ -4,6 +4,23 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>NucleCloudLibrary</AssemblyName>
     <RootNamespace>Nucle.Cloud</RootNamespace>
+	<TargetFramework>netstandard2.0</TargetFramework>
+	<PackageId>nucle.cloud</PackageId>
+	<Title>nucle cloud</Title>
+	<Version>1.0.3</Version>
+	<Authors>nucle.cloud</Authors>
+	<Company>nucle cloud</Company>
+	<Product>nucle cloud service official .Net library</Product>
+	<Description>nucle cloud service official .Net library</Description>
+	<Copyright>nucle.cloud</Copyright>
+	<PackageProjectUrl>https://nucle.cloud</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/nuclecloud</RepositoryUrl>
+	<RepositoryType>github</RepositoryType>
+	<PackageReleaseNotes>remove class models</PackageReleaseNotes>
+	<PackageTags>cloud;service;unity3d;unreal;godot;API;backend;mobile;remote;control;restful;leaderboard;variable;user;anonymous;externallogin;.net;dotnet;c#</PackageTags>
+	<PackageIcon>undefined - Imgur.png</PackageIcon>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,5 +28,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="undefined - Imgur.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>

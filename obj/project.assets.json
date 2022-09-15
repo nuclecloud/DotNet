@@ -29,10 +29,14 @@
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -217,24 +221,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/badrdouah/.nuget/packages/": {}
+    "C:\\Users\\DOUAH\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.3",
     "restore": {
-      "projectUniqueName": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
-      "projectName": "NucleCloudLibrary",
-      "projectPath": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
-      "packagesPath": "/Users/badrdouah/.nuget/packages/",
-      "outputPath": "/Users/badrdouah/Documents/GitHub/DotNet/obj/",
+      "projectUniqueName": "C:\\Users\\DOUAH\\Desktop\\Nucle\\DotNet-main\\DotNet.csproj",
+      "projectName": "nucle.cloud",
+      "projectPath": "C:\\Users\\DOUAH\\Desktop\\Nucle\\DotNet-main\\DotNet.csproj",
+      "packagesPath": "C:\\Users\\DOUAH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DOUAH\\Desktop\\Nucle\\DotNet-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/badrdouah/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\DOUAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -275,7 +281,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

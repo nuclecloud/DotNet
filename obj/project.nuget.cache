@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JVPGAqNF0OustbIzAioy69zd+8z9YycEITSNUNLRRmn327s1kFl97jYoceEGOvVDjsVEp/Wv/k89PZ65PYQQrw==",
+  "dgSpecHash": "9SocftDmlOlTkOYTalTqMVDi4MPTfthYX/S+TPShbMSdoO2pjMoG78nKLaMcObnBK8KiwYHH/DVOC5RVRiVWNQ==",
   "success": true,
-  "projectFilePath": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
+  "projectFilePath": "C:\\Users\\DOUAH\\Desktop\\Nucle\\DotNet-main\\DotNet.csproj",
   "expectedPackageFiles": [
-    "/Users/badrdouah/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/badrdouah/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
-    "/Users/badrdouah/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\DOUAH\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DOUAH\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\DOUAH\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
