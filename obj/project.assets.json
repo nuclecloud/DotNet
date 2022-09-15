@@ -222,11 +222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/badrdouah/Documents/GitHub/.NetLibrary/NucleCloudLibrary/NucleCloudLibrary.csproj",
-      "projectName": "NucleCloudLibrary",
-      "projectPath": "/Users/badrdouah/Documents/GitHub/.NetLibrary/NucleCloudLibrary/NucleCloudLibrary.csproj",
+      "projectUniqueName": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
+      "projectName": "DotNet",
+      "projectPath": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
       "packagesPath": "/Users/badrdouah/.nuget/packages/",
-      "outputPath": "/Users/badrdouah/Documents/GitHub/.NetLibrary/NucleCloudLibrary/obj/",
+      "outputPath": "/Users/badrdouah/Documents/GitHub/DotNet/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/badrdouah/.nuget/NuGet/NuGet.Config"

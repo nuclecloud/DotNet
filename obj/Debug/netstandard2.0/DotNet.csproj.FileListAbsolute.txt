@@ -1,0 +1,10 @@
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Debug/netstandard2.0/NucleCloudLibrary.deps.json
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Debug/netstandard2.0/NucleCloudLibrary.dll
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Debug/netstandard2.0/NucleCloudLibrary.pdb
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/DotNet.csproj.AssemblyReference.cache
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/DotNet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/DotNet.AssemblyInfoInputs.cache
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/DotNet.AssemblyInfo.cs
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/DotNet.csproj.CoreCompileInputs.cache
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/NucleCloudLibrary.dll
+/Users/badrdouah/Documents/GitHub/DotNet/obj/Debug/netstandard2.0/NucleCloudLibrary.pdb
