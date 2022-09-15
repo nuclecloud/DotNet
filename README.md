@@ -84,8 +84,9 @@ Count of variables without pagination applied
 Create a new user and print its id. 
 ```
 using Nucle.Cloud;
- 
-var newUser = await User.Create("b943*************************c173", "ross88@gmail.com", "P@ssw0rd", "ross") ;
+
+var projectId= "b943*************************c173";
+var newUser = await User.Create(projectId, "ross88@gmail.com", "P@ssw0rd", "ross") ;
 Console.WriteLine("New user id= " + newUser.id);
 ```
 
@@ -93,7 +94,8 @@ Login a user and print its token.
 ```
 using Nucle.Cloud;
 
-var loginResult = await User.Login("b943*************************c173", "ross88@gmail.com", "P@ssw0rd");
+var projectId= "b943*************************c173";
+var loginResult = await User.Login(projectId, "ross88@gmail.com", "P@ssw0rd");
 Console.WriteLine("user Token= " + loginResult.userToken);
 ```
 ## GitHub 
