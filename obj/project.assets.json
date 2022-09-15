@@ -223,7 +223,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
-      "projectName": "DotNet",
+      "projectName": "NucleCloudLibrary",
       "projectPath": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
       "packagesPath": "/Users/badrdouah/.nuget/packages/",
       "outputPath": "/Users/badrdouah/Documents/GitHub/DotNet/obj/",

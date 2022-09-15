@@ -1,4 +1,0 @@
-/Users/badrdouah/Desktop/NucleLibrary/NucleCloudLibrary.dll
-/Users/badrdouah/Desktop/NucleLibrary/NucleCloudLibrary.deps.json
-/Users/badrdouah/Desktop/NucleLibrary/NucleCloudLibrary.pdb
-/Users/badrdouah/Desktop/NucleLibrary/Newtonsoft.Json.dll
