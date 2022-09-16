@@ -58,7 +58,7 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<VariablesModel> GetList(string userToken, string presetId, string skip, string take, string orderType, string search)
+        public static async Task<VariablesModel> GetList(string userToken, string presetId, int skip=0, int take=10, int orderType=0, string search=null)
         {
             var model = new { presetId, skip, take, orderType, search };
             var url = "https://api.nucle.cloud/v1/variable/list";
