@@ -83,7 +83,7 @@ Count of variables without pagination applied
 
 ## Example
 
-Create a new user and print its id. 
+Create a new user and print its id.   
 Project Id to get from [Nucle.cloud](https://nucle.cloud) dashboard.   
 ```
 using Nucle.Cloud;
@@ -93,7 +93,7 @@ var newUser = await User.Create(projectId, "ross88@gmail.com", "P@ssw0rd", "ross
 Console.WriteLine("New user id= " + newUser.id);
 ```
 
-Login a user and print its token.
+Login a user and print its token.   
 Project Id to get from [Nucle.cloud](https://nucle.cloud) dashboard.   
 ```
 using Nucle.Cloud;
