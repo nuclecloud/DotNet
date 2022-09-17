@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Nucle.Cloud;
+
 
 namespace Nucle.Cloud
 {
@@ -58,9 +58,10 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<VariablesModel> GetList(string userToken, string presetId, int skip=0, int take=10, int orderType=0, string search=null)
+        public static async Task<VariablesModel> GetList(string userToken, string presetId, int skip=0, int take=10, orderType orderType = orderType.HighToLow, string search=null)
         {
-            var model = new { presetId, skip, take, orderType, search };
+            int _orderType = (int)orderType;
+            var model = new { presetId, skip, take, _orderType, search };
             var url = "https://api.nucle.cloud/v1/variable/list";
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("userToken", userToken);

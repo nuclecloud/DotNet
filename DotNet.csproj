@@ -7,7 +7,7 @@
 	<TargetFramework>netstandard2.0</TargetFramework>
 	<PackageId>nucle.cloud</PackageId>
 	<Title>nucle cloud</Title>
-	<Version>1.0.3</Version>
+	<Version>1.0.5</Version>
 	<Authors>nucle.cloud</Authors>
 	<Company>nucle cloud</Company>
 	<Product>nucle cloud service official .Net library</Product>
@@ -17,15 +17,12 @@
 	<RepositoryUrl>https://github.com/nuclecloud</RepositoryUrl>
 	<RepositoryType>github</RepositoryType>
 	<PackageReleaseNotes>remove class models</PackageReleaseNotes>
-	<PackageTags>cloud;service;unity3d;unreal;godot;API;backend;mobile;remote;control;restful;leaderboard;variable;user;anonymous;externallogin;.net;dotnet;c#</PackageTags>
+	<PackageTags>cloud;service;unity3d;unity;unreal;godot;API;backend;mobile;remote;control;restful;leaderboard;variable;user;anonymous;externallogin;.net;dotnet;c#</PackageTags>
 	<PackageIcon>undefined - Imgur.png</PackageIcon>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Newtonsoft.Json" />
-  </ItemGroup>
   <ItemGroup>
     <None Update="undefined - Imgur.png">
       <Pack>True</Pack>

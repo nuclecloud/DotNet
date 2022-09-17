@@ -8,5 +8,4 @@ namespace Nucle.Cloud
 
         public string errorMessage;
     }
-
 }
