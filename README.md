@@ -15,27 +15,27 @@ First thing to do when using the library is to import it like bellow
  `using Nucle.Cloud;`
 
 ### User
-- `Create(projectId,userName,email,password)`   
+- `Create(string projectId,string userName,string email,string password)`   
 Create new user, return the user created (UserModel)
-- `Login(projectId,email,password )`   
+- `Login(string projectId,string email,string password )`   
 Login a user, return (LoginResult)
-- `RevokeToken(userToken)`   
+- `RevokeToken(string userToken)`   
  Revoke a user token, return  (LoginResult)
-- `SendResetPassword(projectId,email)`    
+- `SendResetPassword(string projectId,string email)`    
 Send password reset email to email user
-- `SendEmailConfirmation(projectId,email)`  
+- `SendEmailConfirmation(string projectId,string email)`  
 Send email confirmation to email user
-- `Upgrade(userToken,userName,email,password)`  
+- `Upgrade(strin guserToken,strin userName,string email,string password)`  
 Upgrade anonymous to real user, return upgraded user  (UserModel)
-- `GetById(userToken,userId)`  
+- `GetById(string userToken,string userId)`  
 Get user by id ,return user  (UserModel)
-- `GetType(userToken)`  
+- `GetType(string userToken)`  
 Get user type(REAL/ANONYMOUS/EXTERNALLOGIN), return type (string)
-- `SetDisplayName(userToken,displayName)`  
+- `SetDisplayName(string userToken,string displayName)`  
 S et user displayName, return user  (UserModel)
--`GetGeolocalizationData(userToken)`  
+-`GetGeolocalizationData(string userToken)`  
 Get user geolocalization data , return (GeolocalizationModel)
-- `Delete(userToken)`  
+- `Delete(string userToken)`  
 Delete user, return deleted user  (UserModel)
  
 
@@ -43,40 +43,43 @@ Delete user, return deleted user  (UserModel)
 
     
 
- - `Login(projectId,deviceId)`  
+ - `Login(string projectId,string deviceId)`  
 Login anonymous user, return (LoginResult)
- - `Create(projectId,deviceId)`  
+ - `Create(string projectId,string deviceId)`  
 Create anonymous user, return (LoginResult)
 ### External Login
 
    
-- `Create(projectId,loginProvider,providerKey,providerDisplayName,userEmail,userName)`  
+- `Create(string projectId,string loginProvider,string providerKey,string providerDisplayName,string userEmail,string userName)`  
 Create external login, return (UserModel) 
-- `Login(projectId,loginProvider,providerKey)`  
+- `Login(string projectId,string loginProvider,string providerKey)`  
 Login using external login, return (LoginResult)
-- `Get(userToken,loginProvider,providerKey)`  
+- `Get(string userToken,string loginProvider, string providerKey)`  
 Get external login, return (ExternalLoginModel)
-- `Delete(userToken,loginProvider,providerKey)`  
+- `Delete(string userToken,string loginProvider,string providerKey)`  
 Delete external login, return deleted external login (ExternalLoginModel)
 
 ### Preset
- - `GetById(userToken,presetId)`  
+ - `GetById(string userToken,string presetId)`  
 Get preset by id, return (PresetModel)
- - `GetByName(userToken,presetName)`  
+ - `GetByName(string userToken,string presetName)`  
 Get preset by name, return (PresetModel)
 
 ### Variable
 
-- `Update(userToken,presetId, value)`  
+- `Update(string userToken,string presetId,string value)`  
  Update variable, if it does not exists this will create a new variable with the value provided, return (VariableModel).  
-- `Get(userToken,presetId)`  
+- `Get(string userToken,string presetId)`  
  Get variable, return (VariableModel) 
-- `Delete(userToken,presetId)`  
+- `Delete(string userToken,string presetId)`  
 Delete variable, return deleted variable (VariableModel)
-- `GetList(userToken,presetId,skip,take,orderType, searchValue)`  
- Get variables list, return (VariablesModel), 
+- `GetList(string userToken,string presetId,int skip,int take,orderType orderType,string searchValue)`  
+ Get variables list,
+ orderType is enum
+ `enum orderType{HighToLow, LowToHigh, Newest,Oldest}`
+ return (VariablesModel), 
  *VariablesModel:* has a list of  (VariableModel) and totalCount of variables without pagination applied
-- `Count(userToken,presetId, searchValue)`  
+- `Count(string userToken,string presetId,string searchValue)`  
 Count of variables without pagination applied
 
 ## Example
