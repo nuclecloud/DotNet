@@ -25,18 +25,18 @@ Login a user, return (LoginResult)
 Send password reset email to email user
 - `SendEmailConfirmation(string projectId,string email)`  
 Send email confirmation to email user
-- `Upgrade(strin guserToken,strin userName,string email,string password)`  
+- `Upgrade(string userToken,strin userName,string email,string password)`  
 Upgrade anonymous to real user, return upgraded user  (UserModel)
 - `GetById(string userToken,string userId)`  
 Get user by id ,return user  (UserModel)
 - `GetType(string userToken)`  
 Get user type(REAL/ANONYMOUS/EXTERNALLOGIN), return type (string)
 - `SetDisplayName(string userToken,string displayName)`  
-S et user displayName, return user  (UserModel)
--`GetGeolocalizationData(string userToken)`  
+S et user displayName, return user  (UserModel)  
+- `GetGeolocalizationData(string userToken)`  
 Get user geolocalization data , return (GeolocalizationModel)
 - `Delete(string userToken)`  
-Delete user, return deleted user  (UserModel)
+Delete user, return deleted user (UserModel)
  
 
 ### Anonymous 
