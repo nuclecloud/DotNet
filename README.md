@@ -15,71 +15,70 @@ First thing to do when using the library is to import it like bellow
  `using Nucle.Cloud;`
 
 ### User
-- `Create(string projectId,string userName,string email,string password)`   
-Create new user, return the user created (UserModel)
-- `Login(string projectId,string email,string password )`   
-Login a user, return (LoginResult)
-- `RevokeToken(string userToken)`   
- Revoke a user token, return  (LoginResult)
+- `async Task<UserModel> Create(string projectId,string userName,string email,string password)`   
+Create new user, return the user created.  
+- `async Task<LoginResult> Login(string projectId,string email,string password )`   
+Login a user.
+- `async Task<LoginResult >RevokeToken(string userToken)`   
+ Revoke a user token.
 - `SendResetPassword(string projectId,string email)`    
 Send password reset email to email user
 - `SendEmailConfirmation(string projectId,string email)`  
 Send email confirmation to email user
-- `Upgrade(string userToken,strin userName,string email,string password)`  
-Upgrade anonymous to real user, return upgraded user  (UserModel)
-- `GetById(string userToken,string userId)`  
-Get user by id ,return user  (UserModel)
-- `GetType(string userToken)`  
-Get user type(REAL/ANONYMOUS/EXTERNALLOGIN), return type (string)
-- `SetDisplayName(string userToken,string displayName)`  
-S et user displayName, return user  (UserModel)  
-- `GetGeolocalizationData(string userToken)`  
-Get user geolocalization data , return (GeolocalizationModel)
-- `Delete(string userToken)`  
-Delete user, return deleted user (UserModel)
+- `async Task<UserModel> Upgrade(string userToken,strin userName,string email,string password)`  
+Upgrade anonymous to real user, return upgraded user.  
+- `async Task<UserModel> GetById(string userToken,string userId)`  
+Get user by id ,return user.  
+- `async Task<string> GetType(string userToken)`  
+Get user type(REAL/ANONYMOUS/EXTERNALLOGIN).
+- `async Task<UserModel> SetDisplayName(string userToken,string displayName)`  
+S et user displayName, return user.    
+- `async Task<GeolocalizationModel> GetGeolocalizationData(string userToken)`  
+Get user geolocalization data.  
+- `async Task<UserModel> Delete(string userToken)`  
+Delete user, return deleted user.  
  
 
 ### Anonymous 
 
     
 
- - `Login(string projectId,string deviceId)`  
-Login anonymous user, return (LoginResult)
- - `Create(string projectId,string deviceId)`  
-Create anonymous user, return (LoginResult)
+ - `async Task<LoginResult> Login(string projectId,string deviceId)`  
+Login anonymous user.  
+ - `async Task<LoginResult> Create(string projectId,string deviceId)`  
+Create anonymous user.  
 ### External Login
 
    
-- `Create(string projectId,string loginProvider,string providerKey,string providerDisplayName,string userEmail,string userName)`  
-Create external login, return (UserModel) 
-- `Login(string projectId,string loginProvider,string providerKey)`  
-Login using external login, return (LoginResult)
-- `Get(string userToken,string loginProvider, string providerKey)`  
-Get external login, return (ExternalLoginModel)
-- `Delete(string userToken,string loginProvider,string providerKey)`  
-Delete external login, return deleted external login (ExternalLoginModel)
+- `async Task<UserModel> Create(string projectId,string loginProvider,string providerKey,string providerDisplayName,string userEmail,string userName)`  
+Create external login.  
+- `async Task<LoginResult> Login(string projectId,string loginProvider,string providerKey)`  
+Login using external login.  
+- `async Task<ExternalLoginModel> Get(string userToken,string loginProvider, string providerKey)`  
+Get external login.  
+- `async Task<ExternalLoginModel> Delete(string userToken,string loginProvider,string providerKey)`  
+Delete external login, return deleted external login.  
 
 ### Preset
- - `GetById(string userToken,string presetId)`  
-Get preset by id, return (PresetModel)
- - `GetByName(string userToken,string presetName)`  
-Get preset by name, return (PresetModel)
+ - `async Task<PresetModel> GetById(string userToken,string presetId)`  
+Get preset by id.  
+ - `async Task<PresetModel> GetByName(string userToken,string presetName)`  
+Get preset by name.  
 
 ### Variable
 
-- `Update(string userToken,string presetId,string value)`  
- Update variable, if it does not exists this will create a new variable with the value provided, return (VariableModel).  
-- `Get(string userToken,string presetId)`  
- Get variable, return (VariableModel) 
-- `Delete(string userToken,string presetId)`  
-Delete variable, return deleted variable (VariableModel)
-- `GetList(string userToken,string presetId,int skip,int take,orderType orderType,string searchValue)`  
+- `async Task<VariableModel> Update(string userToken,string presetId,string value)`  
+ Update variable, if it does not exists this will create a new variable with the value provided.  
+- `async Task<VariableModel> Get(string userToken,string presetId)`  
+ Get variable.    
+- `async Task<VariableModel> Delete(string userToken,string presetId)`  
+Delete variable, return deleted variable  
+- `async Task<VariablesModel> GetList(string userToken,string presetId,int skip,int take,orderType orderType,string searchValue)`  
  Get variables list,
  orderType is enum  
  `enum orderType{HighToLow, LowToHigh, Newest,Oldest}`   
- return (VariablesModel),   
  *VariablesModel:* has a list of  (VariableModel) and totalCount of variables without pagination applied  
-- `Count(string userToken,string presetId,string searchValue)`  
+- `async Task<int> Count(string userToken,string presetId,string searchValue)`  
 Count of variables without pagination applied
 
 ## Example
