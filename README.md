@@ -75,8 +75,8 @@ Get preset by name.
 Delete variable, return deleted variable  
 - `async Task<VariablesModel> GetList(string userToken,string presetId,int skip,int take,orderType orderType,string searchValue)`  
  Get variables list,   
- *orderType:* enum  HighToLow=0, LowToHigh=1, Newest=2, Oldest=3.   
- *VariablesModel:* an object that contains a list of (VariableModel) and totalCount of variables without pagination applied.   
+ *orderType:* (argument) enum  HighToLow=0, LowToHigh=1, Newest=2, Oldest=3.   
+ *VariablesModel:* (return type )an object that contains a list of (VariableModel) and totalCount of variables without pagination applied.   
 - `async Task<int> Count(string userToken,string presetId,string searchValue)`  
 Count of variables without pagination applied
 
