@@ -78,7 +78,7 @@ Delete variable, return deleted variable
  *orderType:* (argument) enum  HighToLow=0, LowToHigh=1, Newest=2, Oldest=3.   
  *VariablesModel:* (return type )an object that contains a list of (VariableModel) and totalCount of variables without pagination applied.   
 - `async Task<int> Count(string userToken,string presetId,string searchValue)`  
-Count of variables without pagination applied
+ Get the count of variables without pagination applied.  
 
 ## Example
 
