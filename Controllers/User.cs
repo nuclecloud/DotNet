@@ -29,7 +29,8 @@ namespace Nucle.Cloud
             }
             else
             {
-                return null;
+                var error = JsonConvert.DeserializeObject<ErrorModel>(jsonString);
+                throw new Exception(error.errorMessage);
             }
         }
 
