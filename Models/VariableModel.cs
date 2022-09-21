@@ -4,7 +4,13 @@ using System.Collections.Generic;
 
 namespace Nucle.Cloud
 {
-    public enum orderType{HighToLow, LowToHigh, Newest,Oldest}
+    public enum orderType
+    {
+        HighToLow,
+        LowToHigh,
+        Newest,
+        Oldest
+    }
 
     [Serializable]
     public class VariableModel

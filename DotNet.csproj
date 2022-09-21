@@ -7,7 +7,7 @@
 	<TargetFramework>netstandard2.0</TargetFramework>
 	<PackageId>nucle.cloud</PackageId>
 	<Title>nucle cloud</Title>
-	<Version>1.0.7</Version>
+	<Version>1.0.8</Version>
 	<Authors>nucle.cloud</Authors>
 	<Company>nucle cloud</Company>
 	<Product>nucle cloud service official .Net library</Product>

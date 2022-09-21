@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Nucle.Cloud
 {
+
+
     [Serializable]
     public class PresetModel
     {
@@ -12,9 +15,9 @@ namespace Nucle.Cloud
 
         public string globalValue;
 
-        public string valueType;
+        public valueType valueType;
 
-        public string updateType;
+        public updateType updateType;
 
         public string creationDate;
 
@@ -27,5 +30,23 @@ namespace Nucle.Cloud
         public List<PresetModel> list;
 
         public int totalCount;
+    }
+
+
+    public enum valueType
+    {
+        Integer,
+        Float,
+        Bool,
+        String,
+        Text
+    }
+
+    public enum updateType
+    {
+        AlwaysUpdate,
+        UpdateIfNewIsMax,
+        UpdateIfNewIsMin,
+        CreateNew
     }
 }
