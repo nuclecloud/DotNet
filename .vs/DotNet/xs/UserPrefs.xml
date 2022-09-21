@@ -1,15 +1,18 @@
 ﻿<Properties>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/User.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/PresetModel.cs">
     <Files>
-      <File FileName="README.md" Line="1" Column="1" />
-      <File FileName="Controllers/User.cs" Line="51" Column="37" />
+      <File FileName="README.md" Line="16" Column="1" />
+      <File FileName="Controllers/User.cs" Line="52" Column="14" />
       <File FileName="Controllers/Variable.cs" Line="65" Column="50" />
+      <File FileName="Controllers/Anonymous.cs" Line="34" Column="14" />
+      <File FileName="DotNet.csproj" Line="11" Column="32" />
+      <File FileName="Controllers/Preset.cs" Line="25" Column="14" />
+      <File FileName="Models/PresetModel.cs" Line="27" Column="19" />
+      <File FileName="Models/VariableModel.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,8 +22,9 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="User.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="PresetModel.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -31,4 +35,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

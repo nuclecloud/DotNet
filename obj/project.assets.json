@@ -220,7 +220,7 @@
     "/Users/badrdouah/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.6",
+    "version": "1.0.8",
     "restore": {
       "projectUniqueName": "/Users/badrdouah/Documents/GitHub/DotNet/DotNet.csproj",
       "projectName": "nucle.cloud",
