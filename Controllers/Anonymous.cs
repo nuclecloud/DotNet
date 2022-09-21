@@ -7,7 +7,7 @@ namespace Nucle.Cloud
 {
     public static class Anonymous
     {
-        public static async Task<LoginResult> Create(string projectId,string deviceId)
+        public static async Task<UserModel> Create(string projectId,string deviceId)
         {
 
             var model = new { deviceId = deviceId };
@@ -24,7 +24,7 @@ namespace Nucle.Cloud
 
             if (response.IsSuccessStatusCode)
             {
-                var result = JsonConvert.DeserializeObject<LoginResult>(jsonString);
+                var result = JsonConvert.DeserializeObject<UserModel>(jsonString);
                 return result;
             }
             else
@@ -32,7 +32,6 @@ namespace Nucle.Cloud
                 var error = JsonConvert.DeserializeObject<ErrorModel>(jsonString);
                 throw new Exception(error.errorMessage);
             }
-
         }
 
         public static async Task<LoginResult> Login(string projectId,string deviceId)

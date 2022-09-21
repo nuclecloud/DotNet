@@ -41,12 +41,11 @@ Delete user, return deleted user.
 
 ### Anonymous 
 
-    
-
  - `async Task<LoginResult> Login(string projectId,string deviceId)`  
 Login anonymous user.  
- - `async Task<LoginResult> Create(string projectId,string deviceId)`  
-Create anonymous user.  
+ - `async Task<UserModel> Create(string projectId,string deviceId)`  
+Create anonymous user.
+
 ### External Login
 
    
