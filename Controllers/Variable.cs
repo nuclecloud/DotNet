@@ -8,7 +8,7 @@ namespace Nucle.Cloud
 {
     public static class Variable
     {
-        public static async Task<VariableModel> Update(string userToken,string presetId, string value)
+        public static async Task<VariableModel> Update(string userToken,string presetId, string value = null)
         {
             var model = new { presetId, value };
             var url = "https://api.nucle.cloud/v1/variable/update";

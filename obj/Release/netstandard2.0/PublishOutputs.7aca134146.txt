@@ -1,0 +1,4 @@
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Release/netstandard2.0/publish/NucleCloudLibrary.dll
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Release/netstandard2.0/publish/NucleCloudLibrary.deps.json
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Release/netstandard2.0/publish/NucleCloudLibrary.pdb
+/Users/badrdouah/Documents/GitHub/DotNet/bin/Release/netstandard2.0/publish/Newtonsoft.Json.dll
