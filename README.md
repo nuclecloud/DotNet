@@ -17,10 +17,12 @@ First thing to do when using the library is to import it like bellow
 ### User
 - `async Task<UserModel> Create(string projectId,string userName,string email,string password)`   
 Create new user, return the user created.  
-- `async Task<LoginResult> Login(string projectId,string email,string password )`   
-Login a user.
+- `async Task<LoginResult> LoginWithEmail(string projectId,string email,string password )`   
+Login a user with email.
+- `async Task<LoginResult> LoginWithUserName(string projectId,string userName,string password )`   
+Login a user with username.
 - `async Task<LoginResult >RevokeToken(string userToken)`   
- Revoke a user token.
+Revoke a user token.
 - `SendResetPassword(string projectId,string email)`    
 Send password reset email to email user
 - `SendEmailConfirmation(string projectId,string email)`  
@@ -95,7 +97,7 @@ Project Id to get from [Nucle.cloud](https://nucle.cloud) dashboard.
 using Nucle.Cloud;
 
 var projectId= "b943*************************c173";
-var loginResult = await User.Login(projectId, "ross88@gmail.com", "P@ssw0rd");
+var loginResult = await User.LoginWithEmail(projectId, "ross88@gmail.com", "P@ssw0rd");
 Console.WriteLine("user Token= " + loginResult.userToken);
 ```
 ## GitHub 

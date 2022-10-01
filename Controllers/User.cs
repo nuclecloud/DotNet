@@ -34,10 +34,36 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<LoginResult> Login(string projectId, string email, string password)
+        public static async Task<LoginResult> LoginWithUserName(string projectId, string username, string password)
+        {
+            var model = new { username, password };
+            var url = "https://api.nucle.cloud/v1/user/login/username";
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("projectId", projectId);
+
+            string json = JsonConvert.SerializeObject(model);
+            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
+                , "application/json");
+
+            var response = await client.PostAsync(url, httpContent);
+            var jsonString = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = JsonConvert.DeserializeObject<LoginResult>(jsonString);
+                return result;
+            }
+            else
+            {
+                var error = JsonConvert.DeserializeObject<ErrorModel>(jsonString);
+                throw new Exception(error.errorMessage);
+            }
+        }
+
+        public static async Task<LoginResult> LoginWithEmail(string projectId, string email, string password)
         {
             var model = new { email, password };
-            var url = "https://api.nucle.cloud/v1/user/login";
+            var url = "https://api.nucle.cloud/v1/user/login/email";
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("projectId", projectId);
 
@@ -67,7 +93,7 @@ namespace Nucle.Cloud
             client.DefaultRequestHeaders.Add("userToken", userToken);
 
             StringContent httpContent = new StringContent("{}", System.Text.Encoding.UTF8
-         , "application/json");
+                 , "application/json");
             var response = await client.PostAsync(url, httpContent);
             var jsonString = await response.Content.ReadAsStringAsync();
 
