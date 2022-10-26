@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 namespace Nucle.Cloud
 {
+
+    public enum emailAction { EmailConfirmation, PasswordReset};
     [Serializable]
     public class UserModel
     {
@@ -16,7 +18,7 @@ namespace Nucle.Cloud
     }
 
     [Serializable]
-    public class GeolocalizationModel
+    public class GeolocalisationModel
     {
         public string userID;
         public string ip;

@@ -23,10 +23,8 @@ Login a user with email.
 Login a user with username.
 - `async Task<LoginResult >RevokeToken(string userToken)`   
 Revoke a user token.
-- `SendResetPassword(string projectId,string email)`    
-Send password reset email to email user
-- `SendEmailConfirmation(string projectId,string email)`  
-Send email confirmation to email user
+- `SendEmail(string projectId,string email,emailAction emailAction)`    
+Send a user an email to either confirm his email or to reset his password.
 - `async Task<UserModel> Upgrade(string userToken,strin userName,string email,string password)`  
 Upgrade anonymous to real user, return upgraded user.  
 - `async Task<UserModel> GetById(string userToken,string userId)`  
@@ -35,16 +33,20 @@ Get user by id ,return user.
 Get user type(REAL/ANONYMOUS/EXTERNALLOGIN).
 - `async Task<UserModel> SetDisplayName(string userToken,string displayName)`  
 S et user displayName, return user.    
-- `async Task<GeolocalizationModel> GetGeolocalizationData(string userToken)`  
-Get user geolocalization data.  
+- `async Task<GeolocalisationModel> GetGeolocalisationData(string userToken)`  
+Get user geolocalisation data.  
 - `async Task<UserModel> Delete(string userToken)`  
 Delete user, return deleted user.  
  
 
 ### Anonymous 
 
+ - `async Task<UserModel> Create(string projectId,string deviceId)`  
+Create an anonymous user.
  - `async Task<LoginResult> Login(string projectId,string deviceId)`  
-Create if none exists then authenticate anonymous user.  
+Authenticate anonymous user.
+ - `async Task<UserModel> Get(string projectId,string deviceId)`  
+Get an anonymous user, return null if no anonymous user was found with the same device id.  
 
 ### External Login
 

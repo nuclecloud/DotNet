@@ -110,33 +110,37 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task SendResetPassword(string projectId, string email)
+        public static async Task SendEmail(string projectId, string email, emailAction emailAction)
         {
-            var model = new { email };
-            var url = "https://api.nucle.cloud/v1/user/passwordreset/send";
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("projectId", projectId);
 
-            string json = JsonConvert.SerializeObject(model);
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
-         , "application/json");
-
-            await client.PostAsync(url, httpContent);
-        }
-
-        public static async Task SendEmailConfirmation(string projectId, string email)
-        {
-            var model = new { email};
-            var url = "https://api.nucle.cloud/v1/user/confirmemail/send";
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("projectId", projectId);
+            if(emailAction== emailAction.EmailConfirmation)
+            {
+                var model = new { email };
+                var url = "https://api.nucle.cloud/v1/user/confirmemail/send";
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("projectId", projectId);
 
 
-            string json = JsonConvert.SerializeObject(model);
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
-         , "application/json");
+                string json = JsonConvert.SerializeObject(model);
+                StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
+             , "application/json");
 
-            await client.PostAsync(url, httpContent);
+                await client.PostAsync(url, httpContent);
+            }
+            else if (emailAction == emailAction.PasswordReset)
+            {
+                var model = new { email };
+                var url = "https://api.nucle.cloud/v1/user/passwordreset/send";
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("projectId", projectId);
+
+                string json = JsonConvert.SerializeObject(model);
+                StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
+             , "application/json");
+
+                await client.PostAsync(url, httpContent);
+            }
+         
         }
 
         public static async Task<UserModel> Upgrade(string userToken, string email, string password, string userName)
@@ -240,9 +244,9 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<GeolocalizationModel> GetGeolocalizationData(string userToken)
+        public static async Task<GeolocalisationModel> GetGeolocalisationData(string userToken)
         {
-            var url = "https://api.nucle.cloud/v1/user/geolocalization/get";
+            var url = "https://api.nucle.cloud/v1/user/geolocalisation/get";
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("userToken", userToken);
 
@@ -253,7 +257,7 @@ namespace Nucle.Cloud
 
             if (response.IsSuccessStatusCode)
             {
-                var result = JsonConvert.DeserializeObject<GeolocalizationModel>(jsonString);
+                var result = JsonConvert.DeserializeObject<GeolocalisationModel>(jsonString);
                 return result;
             }
             else
