@@ -15,19 +15,13 @@ namespace Nucle.Cloud
         public string email;
         public string creationDate;
         public string lastLogin;
-    }
-
-    [Serializable]
-    public class GeolocalisationModel
-    {
-        public string userID;
         public string ip;
         public string city;
         public string region;
         public string country;
+        public string country_code;
         public string latitude;
         public string longtitude;
-        public string lastUpdate;
     }
  
     [Serializable]

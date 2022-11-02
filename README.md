@@ -33,8 +33,8 @@ Get user by id ,return user.
 Get user type(REAL/ANONYMOUS/EXTERNALLOGIN).
 - `async Task<UserModel> SetDisplayName(string userToken,string displayName)`  
 S et user displayName, return user.    
-- `async Task<GeolocalisationModel> GetGeolocalisationData(string userToken)`  
-Get user geolocalisation data.  
+- `async Task<GeolocalisationModel> GetGeolocalisationData(string userToken,string userId)`  
+Get a user geolocalisation data.  
 - `async Task<UserModel> Delete(string userToken)`  
 Delete user, return deleted user.  
  
@@ -70,7 +70,7 @@ Get preset by name.
 
 - `async Task<VariableModel> Update(string userToken,string presetId,string value)`  
  Update variable, if it does not exists this will create a new variable with the value provided.  
-- `async Task<VariableModel> Get(string userToken,string presetId)`  
+- `async Task<VariableModel> Get(string userToken,string presetId, orderType orderType)`  
  Get variable.    
 - `async Task<VariableModel> Delete(string userToken,string presetId)`  
 Delete variable, return deleted variable  

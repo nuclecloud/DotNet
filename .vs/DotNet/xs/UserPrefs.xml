@@ -1,14 +1,20 @@
 ﻿<Properties>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/User.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/Variable.cs">
     <Files>
-      <File FileName="README.md" Line="37" Column="20" />
-      <File FileName="Models/VariableModel.cs" Line="1" Column="1" />
-      <File FileName="Controllers/Variable.cs" Line="13" Column="22" />
-      <File FileName="Controllers/User.cs" Line="286" Column="14" />
+      <File FileName="README.md" Line="74" Column="14" />
+      <File FileName="Models/VariableModel.cs" Line="13" Column="6" />
+      <File FileName="Controllers/Variable.cs" Line="66" Column="28" />
+      <File FileName="Controllers/User.cs" Line="254" Column="1" />
       <File FileName="DotNet.csproj" Line="10" Column="16" />
       <File FileName="Controllers/Anonymous.cs" Line="67" Column="71" />
-      <File FileName="Models/UserModel.cs" Line="21" Column="28" />
+      <File FileName="Models/UserModel.cs" Line="21" Column="45" />
+      <File FileName="Controllers/Preset.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,9 +32,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

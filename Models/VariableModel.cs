@@ -15,6 +15,7 @@ namespace Nucle.Cloud
     [Serializable]
     public class VariableModel
     {
+        public int rank;
         public string id;
         public string userId;
         public string value;

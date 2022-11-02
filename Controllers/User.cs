@@ -244,30 +244,6 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<GeolocalisationModel> GetGeolocalisationData(string userToken)
-        {
-            var url = "https://api.nucle.cloud/v1/user/geolocalisation/get";
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("userToken", userToken);
-
-            StringContent httpContent = new StringContent("{ }", System.Text.Encoding.UTF8
-    , "application/json");
-            var response = await client.PostAsync(url, httpContent);
-            var jsonString = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var result = JsonConvert.DeserializeObject<GeolocalisationModel>(jsonString);
-                return result;
-            }
-            else
-            {
-                var error = JsonConvert.DeserializeObject<ErrorModel>(jsonString);
-                throw new Exception(error.errorMessage);
-            }
-
-        }
-
         public static async Task<UserModel> Delete(string userToken)
         {
             var url = "https://api.nucle.cloud/v1/user/delete";
