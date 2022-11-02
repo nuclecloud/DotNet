@@ -29,12 +29,8 @@ Send a user an email to either confirm his email or to reset his password.
 Upgrade anonymous to real user, return upgraded user.  
 - `async Task<UserModel> GetById(string userToken,string userId)`  
 Get user by id ,return user.  
-- `async Task<string> GetType(string userToken)`  
-Get user type(REAL/ANONYMOUS/EXTERNALLOGIN).
 - `async Task<UserModel> SetDisplayName(string userToken,string displayName)`  
 S et user displayName, return user.    
-- `async Task<GeolocalisationModel> GetGeolocalisationData(string userToken,string userId)`  
-Get a user geolocalisation data.  
 - `async Task<UserModel> Delete(string userToken)`  
 Delete user, return deleted user.  
  
@@ -48,17 +44,6 @@ Authenticate anonymous user.
  - `async Task<UserModel> Get(string projectId,string deviceId)`  
 Get an anonymous user, return null if no anonymous user was found with the same device id.  
 
-### External Login
-
-   
-- `async Task<UserModel> Create(string projectId,string loginProvider,string providerKey,string providerDisplayName,string userEmail,string userName)`  
-Create external login.  
-- `async Task<LoginResult> Login(string projectId,string loginProvider,string providerKey)`  
-Login using external login.  
-- `async Task<ExternalLoginModel> Get(string userToken,string loginProvider, string providerKey)`  
-Get external login.  
-- `async Task<ExternalLoginModel> Delete(string userToken,string loginProvider,string providerKey)`  
-Delete external login, return deleted external login.  
 
 ### Preset
  - `async Task<PresetModel> GetById(string userToken,string presetId)`  
@@ -74,12 +59,23 @@ Get preset by name.
  Get variable.    
 - `async Task<VariableModel> Delete(string userToken,string presetId)`  
 Delete variable, return deleted variable  
-- `async Task<VariablesModel> GetList(string userToken,string presetId,int skip,int take,orderType orderType,string searchValue)`  
+- `async Task<VariablesModel> GetList(string userToken,string presetId,int skip,int take,orderType orderType)`  
  Get variables list,   
  *orderType:* (argument) enum  HighToLow=0, LowToHigh=1, Newest=2, Oldest=3.   
  *VariablesModel:* (return type )an object that contains a list of (VariableModel) and totalCount of variables without pagination applied.   
 - `async Task<int> Count(string userToken,string presetId,string searchValue)`  
- Get the count of variables without pagination applied.  
+ Get the count of variables without pagination applied.
+
+### Event
+
+- `async Task<EventModel> Register(string userToken,string presetId)`  
+ Register event for the current date.
+- `async Task<EventModel> Get(string userToken,string presetId)`  
+ Get event.
+- `async Task<EventsModel> GetList(string userToken,string presetId,int skip,int take,orderType orderType )`  
+ Get events list.
+- `async Task<EventModel> Delete(string userToken,string presetId,DateTime date)`  
+ Delete event.
 
 ## Example
 
