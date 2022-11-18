@@ -68,7 +68,7 @@ namespace Nucle.Cloud.Controllers
             int _orderType = (int)orderType;
             var args = new { skip, take, _orderType };
             var model = new { presetId, args };
-            var url = "https://api.nucle.cloud/v1/event/get";
+            var url = "https://api.nucle.cloud/v1/event/getlist";
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("userToken", userToken);
 

@@ -20,6 +20,8 @@ namespace Nucle.Cloud
         public string userId;
         public string value;
         public string lastUpdate;
+        public string displayName;
+        public string countryCode;
     }
 
     [Serializable]
