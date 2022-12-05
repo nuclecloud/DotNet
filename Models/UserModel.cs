@@ -22,6 +22,7 @@ namespace Nucle.Cloud
         public string country_code;
         public string latitude;
         public string longtitude;
+        public string os;
     }
  
     [Serializable]

@@ -58,10 +58,10 @@ namespace Nucle.Cloud
             }
         }
 
-        public static async Task<VariablesModel> GetList(string userToken, string presetId, int skip=0, int take=10, orderType orderType = orderType.HighToLow)
+        public static async Task<VariablesModel> GetList(string userToken, string presetId, int skip=0, int take=10, orderType orderType = orderType.HighToLow, string filter = null)
         {
             int _orderType = (int)orderType;
-            var args = new { skip ,take, _orderType };
+            var args = new { skip ,take, _orderType, filter };
             var model = new { presetId, args };
             var url = "https://api.nucle.cloud/v1/variable/list";
             HttpClient client = new HttpClient();
@@ -102,31 +102,6 @@ namespace Nucle.Cloud
             if (response.IsSuccessStatusCode)
             {
                 var result = JsonConvert.DeserializeObject<VariableModel>(jsonString);
-                return result;
-            }
-            else
-            {
-                var error = JsonConvert.DeserializeObject<ErrorModel>(jsonString);
-                throw new Exception(error.errorMessage);
-            }
-        }
-
-        public static async Task<int> Count( string userToken, string presetId, string searchValue)
-        {
-            var model = new { presetId, searchValue };
-            var url = "https://api.nucle.cloud/v1/variable/count";
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("userToken", userToken);
-
-            string json = JsonConvert.SerializeObject(model);
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8
-                     , "application/json");
-            var response = await client.PostAsync(url, httpContent);
-            var jsonString = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var result = JsonConvert.DeserializeObject<int>(jsonString);
                 return result;
             }
             else

@@ -8,7 +8,6 @@ namespace Nucle.Cloud.Controllers
 {
     public class Event
     {
- 
         public static async Task<EventModel> Register(string userToken, string presetId)
         {
             var model = new { presetId  = presetId };
